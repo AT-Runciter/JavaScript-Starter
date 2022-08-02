@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw 3 - average value, total cost and result output</title>
+</head>
+
+<body>
+    <pre>
+        Display:
+        1) Average price per product;
+        2) The total cost of all goods that are in stock.
+    </pre>
+
+    <script>
+        let productPrice1 = 101.5; // firts product price
+        let productPrice2 = 50.25; // second product price
+        let productPrice3 = 10.11; // third product price
+
+        let productQuantity1 = 5;  // number of units of the first product in stock
+        let productQuantity2 = 9;  // number of units of the second product in stock
+        let productQuantity3 = 15; // number of units of the third product in stock
+
+        let productQuantity4 = (productQuantity1 * productPrice1) + (productQuantity2 * productPrice2) + (productQuantity3 * productPrice3);
+
+        let sredniyPrice = (productPrice1 + productPrice2 + productPrice3) / 3;
+        let obshiyPrice = productPrice1 * productQuantity1 + productPrice2 * productQuantity2 + productPrice3 * productQuantity3;
+
+        // console.log(sredniyPrice);
+        // console.log(obshiyPrice);
+
+        alert(sredniyPrice);
+        alert(obshiyPrice);
+
+    </script>
+</body>
+
+</html>
