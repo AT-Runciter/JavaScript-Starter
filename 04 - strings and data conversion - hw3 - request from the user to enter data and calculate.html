@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3 - How much user wants to buy - how much money needs to be deposited - how much will remain in the warehouse in the end</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+         1) ask the user how many units he wants to buy
+         2) display on the screen how much the user should deposit, taking into account the number of units purchased
+         3) display on the screen how many units of the product will remain in stock after purchase
+    </pre>
+
+    <script>
+        alert ("An interesting calculation:");
+
+        let amt; 
+
+        let pP = 101.5; // the price of the product, productPrice
+        let pQ = 50;  // number of items in stock, productQuantity
+
+        let productQuantity = Number(prompt("How much do you want to buy?"));
+           
+        amt = pP * productQuantity; // calculation of the cost of the selected number of goods, рР - the specified price, productQuantity - the amount that the user contributes
+    
+        alert(`For the specified number of goods at a price ${pP} have to pay ${amt}`);
+
+        alert(`After purchase there will be such quantity in stock: ${pQ - productQuantity}`);
+        // alert(`After purchase there will be such quantity in stock: ${(pQ - productQuantity)}`); - brackets inside for complex calculations, they are not displayed in the message
+
+        
+       //one more solution:
+       // let count = prompt("How many items do you want to purchase?", 1);
+       // let totalSum = count * productPrice;
+       // let leftInStorage = productQuantity - count; 
+       // alert("Total cost " + totalSum);
+       // alert("Quantity of goods that will remain in stock after purchase " + leftInStorage);
+
+    </script>
+
+</body>
+
+</html>
+

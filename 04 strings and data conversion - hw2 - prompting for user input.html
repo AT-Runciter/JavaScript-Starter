@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2 - Prompting for user input</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+         Make changes to the script. Make it so that the value for radius and height is entered by the user.
+         When outputting values, use formatted output, e.g. "volume of a cylinder with height X and radius Y = Z"
+    </pre>
+    <script>
+
+        alert("Calculating the volume of a cylinder:")
+        let V;
+        const Pi = 3.1415926535; // important: for such values you need to use a constant
+
+        //let r = 10; // radius
+        //let h = 20; // height
+
+        let r = Number(prompt("enter the radius of the cylinder"));
+        let h = Number(prompt("enter the height of the cylinder"));
+
+        // var t = "r"; additional verification
+        // t = Boolean(0);
+        //  console.log(typeof(t));
+
+        V = Pi * r * r * h;
+
+        alert(`Сylinder volume with height ${h} and radius ${r} = ${V}`);
+
+    </script>
+</body>
+
+</html>

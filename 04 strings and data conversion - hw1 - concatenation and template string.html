@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1 - concatenation and template string</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+         1) initialize the message variable
+         2) the value must be created using a template string and using concatenation.
+         3) the string value must be created based on the values of the variables name, age, company, position
+         4) The value must follow the pattern: "Hi, my name is Ivan. I am 25 years old. I work as a Frontend Developer at ITVDN."
+    </pre>
+
+    <script>
+        let name = "Nikolai";
+        let age = 26;
+        let company = "Decay of Angels Ensemble";
+        let position = "magician";
+
+
+        let message = "Hello, my name is " + name + ". I am" + age + " years old. I work as a" + position + " at" + company + ".";
+        message = `Hello, my name is ${name}. I am ${age} years old. I work as a ${position} at ${company}. `
+        alert(message);
+
+
+
+    </script>
+</body>
+
+</html>
