@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+         The season variable can take 4 values: 1, 2, 3, or 4. If the value of the variable is 1, write the value "winter" to the variable result,
+         if value 2 is "spring", etc. Print the value of the result variable to the screen. Solve the problem using the switch construct.
+    </pre>
+    <script>
+        let season = prompt("Введіть значення 1, 2, 3 або 4");
+        let result;
+
+        switch (season) {
+            case "1":
+                result = "Зима";
+                break;
+            case "2":
+                result = "Весна";
+                break;
+            case "3":
+                result = "Літо";
+                break;
+            case "4":
+                result = "Осінь";
+                break;
+            default:
+                result = "Введіть значення 1, 2, 3 или 4";
+                break;
+        }
+        alert(result);
+
+
+
+    </script>
+</body>
+
+</html>

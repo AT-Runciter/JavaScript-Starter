@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+         Replace conditional constructs with a ternary operator where possible.
+    </pre>
+    <script>
+        /* let age = +prompt("Напишіть ваш вік");
+        let technology = prompt("Напишіть 1 или 2. 1 - JavaScript. 2 - C#");
+        let expirience = prompt("Напишіть ваш досвід роботи у роках");
+
+        let adult, specialization, position;
+
+        if (age > 18)
+        {
+            adult = "повнолітній";
+        }
+        else
+        {
+            adult = "неповнолітній"
+        }
+
+        if (technology == 1)
+        {
+            specialization = "Frontend";
+        }
+        else
+        {
+            specialization = "Backend";
+        }
+
+        if (expirience == 0)
+        {
+            position = "Без досвіду роботи";
+        }
+        else if (expirience > 0 && expirience < 1.5)
+        {
+            position = "Junior";
+        }
+        else if (expirience > 1.5 && expirience < 3)
+        {
+            position = "Middle";
+        }
+        else if(expirience > 3)
+        {
+            position = "Senior";
+        }
+        else
+        {
+            position = "error";
+        } 
+
+        let result = `Вік: ${adult}\r\n Спеціалізація: ${specialization}\r\n Позиція: ${position}`;
+        alert(result);*/
+
+        let age = +prompt("Напишіть ваш вік");
+        let technology = prompt("Напишіть 1 или 2. 1 - JavaScript. 2 - C#");
+        let expirience = prompt("Напишіть ваш досвід роботи у роках");
+
+        let adult, specialization, position;
+
+        adult = age > 18 ? "повнолітній" : "неповнолітній";
+        specialization = technology == 1 ? "Frontend" : "Backend";
+
+        if (expirience == 0) {
+            position = "Без досвіду роботи";
+        }
+        else if (expirience > 0 && expirience < 1.5) {
+            position = "Junior";
+        }
+        else if (expirience > 1.5 && expirience < 3) {
+            position = "Middle";
+        }
+        else if (expirience > 3) {
+            position = "Senior";
+        }
+        else {
+            position = "error";
+        }
+
+        result = `Вік: ${adult}\r\n Спеціалізація: ${specialization}\r\n Позиція: ${position}`;
+
+        alert(result);
+
+    </script>
+</body>
+
+</html>
