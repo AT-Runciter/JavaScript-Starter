@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+         Write a script to get a value greater than 10 from the user.
+         If the user entered a value less than 10, request the value again and so on until the user enters the correct value.
+         It is not necessary to provide for the handling of non-numeric values.
+    </pre>
+    <script>
+
+        while (true) {
+            input = +prompt("Напишіть число більше 10");
+            if (input > 10)
+                break;
+        }
+        alert("Ви написали число " + input);
+
+    </script>
+</body>
+
+</html>

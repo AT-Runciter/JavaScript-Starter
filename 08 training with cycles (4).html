@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+         Ask the user for a number, calculate the sum of all numbers between 0 and the entered value, and display the result on the screen.
+    </pre>
+    <script>
+
+        let value = +prompt ("Напиши число");
+        let result = 0;
+        for  (let i = 0; i < value; i++) {
+            result += i;
+            console.log ("res ="+result+"| i= " +i);
+        }
+      //  return result;
+        console.log ("Сума всіх чисел між 0 та тим, яке написав користувач = " +result);
+
+    </script>
+</body>
+
+</html>

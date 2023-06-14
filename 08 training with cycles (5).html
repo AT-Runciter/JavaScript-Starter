@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+         Write the script "Game 'Guess the Number'". The essence of the game is to guess in fewer attempts the number that the script made up.
+         Each time the player tries to guess a number, the script will display a hint - a lower or higher number was guessed by the script.
+         The script guesses the number only once at the beginning of the game and this number does not change until the end of the game.
+         To solve the problem, use cyclic and conditional constructions.
+
+         to generate a random number use the following code:
+         let randomValue = Math.floor(Math.random() * 101); // a random value from 0 to 100 will be written to the randomValue variable
+        
+         Game example:
+         Scenario: I made a random value from 0 to 100
+         User: 50
+         Scenario: I made a value greater than 50
+         User: 75
+         Scenario: I made a value less than 75
+         User: 62
+         Scenario: I made a value less than 62
+         User: 56
+         Scenario: Right! The hidden value is 56. You guessed right on the 4th try.
+    </pre>
+    <script>
+
+        let randomValue = Math.floor(Math.random() * 101);
+        let value = 0;
+        alert("Загадано числов межах від 0 до 100")
+
+        while (true) {
+            value++;
+            let guessValue = prompt("Напиши число - раптом відгадаєш, яке випадкове число загадано");
+
+            if (guessValue == "Кінець") {
+                break;
+            }
+
+            else if (guessValue > randomValue) {
+                alert(`Загадане число менше, ніж ${guessValue}`);
+            }
+
+            else if (guessValue < randomValue) {
+                alert(`Загадане число більше, ніж ${guessValue}`);
+            }
+
+            else if (guessValue == randomValue) {
+                alert(`Вау! Загадано ${randomValue}. Це твоя ${value} спроба`);
+                break;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
