@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+    <pre>
+        Exercise:
+         Refine the script. If the user orders more goods than they have in stock, let him know. 
+         If the user orders quantity of goods not exceeding the quantity in stock - calculate the total cost of the order.
+    </pre>
+    <script>
+        let productPrice = 101.5; // ціна товару
+        let productQuantity = 50;  // кількість одиниць товару на складі
+
+        let count = prompt("Яку кількість одиниць товару бажаєте придбати?", 1);
+      
+        if (count == 0) {
+            alert("Ви ввели 0. Якщо бажаєте купити товар - введіть іншу цифру");
+        }
+        else if (count > productQuantity) {
+            alert("Недостатня кількість товару на складі")
+        }
+        else {
+            let totalSum = count * productPrice;
+            let leftInStorage = productQuantity - count;
+
+            alert("Загальна вартість " + totalSum);
+            alert("Після покупки на складі залишиться ось стільки товарів:  " + leftInStorage);
+        }
+
+
+    </script>
+</body>
+</html>
