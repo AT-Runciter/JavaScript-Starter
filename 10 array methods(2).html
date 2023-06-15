@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+         Write a script that will prompt the user for values until the user enters the value stop
+         All entered values, if they are a number, must be added to the array.
+         After the user enters a stop value, calculate the sum of all the values that are in the array.
+    </pre>
+    <script>
+
+        let values = [];
+
+        while (true) {
+            let input = prompt("Напиши число. Для виходу з циклу напиши слово стоп");
+
+            if (input == "стоп") break;
+
+            let num = Number(input);
+            if (!isNaN(num)) {
+                values.push(num);
+            }
+        }
+        let sum = 0;
+        for (const val of values) {
+            sum += val;
+        }
+        alert("Cума всіх чисел, що були введені: " + sum);
+        console.log(values)
+
+    </script>
+</body>
+
+</html>

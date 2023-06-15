@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+        Ask the user to enter the name of the city. Remove this city from the array elements.
+        If the city is not in the array, notify the user.
+        Display the array on the screen after the elements have been removed.
+    </pre>
+    <script>
+        let cities = ["London", "Paris", "Berlin", "Rome", "Budapest", "Lisbon", "Madrid", "Amsterdam"];
+
+        let input = prompt("Напишіть одну з назв міст, які є в масиві (англ. мова, враховуйте регістр)");
+        let index = cities.indexOf(input);
+
+        if (index == -1) {
+            alert("Це місто не знайдене");
+        }
+        else {
+            cities.splice(index, 1);
+        }
+        for (const city of cities) {
+            console.log(city);
+        }
+
+
+
+    </script>
+</body>
+
+</html>

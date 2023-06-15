@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+         Rewrite the script and use one of the methods learned in the lesson. Change the code to keep its behavior.
+    </pre>
+    <script>
+        let values = [10, 20, 5, 7, 11, 8, 125, 4, 8, 3, 23];
+        let oddValues = [];
+        let evenValues = [];
+        //  let oddValuesPosition = 0;
+        //  let evenValuesPosition = 0;
+        for (let value of values) {
+            if (value % 2 == 0) {
+                evenValues.push(value);
+                // evenValues[evenValuesPosition] = value;
+                // evenValuesPosition++;
+            }
+            else {
+                //oddValues[oddValuesPosition] = value;
+                // oddValuesPosition++;
+                oddValues.push(value);
+            }
+        }
+        console.log("Непарні значення");
+        for (let oddVal of oddValues) {
+            console.log(oddVal);
+        }
+
+        console.log("Парні значення");
+        for (let evenVal of evenValues) {
+            console.log(evenVal);
+        }
+
+    </script>
+</body>
+
+</html>
