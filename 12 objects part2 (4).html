@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task X</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+         Rewrite the code. Make a factory method that will take two parameters firstName and lastName and create an object with two properties firstName and lastName.
+         Make the print function become a method of the object that is created via the factory function.
+         Use the shorthand methods and shorthand properties.
+    </pre>
+    <script>
+
+        /*let obj1 = {
+            firstName: "Nikolai",
+            lastName: "Gogol"
+        };
+
+        let obj2 = {
+            firstName: "Jhon",
+            lastName: "Doe"
+        };
+
+        function print(obj) {
+            console.log("First Name: " + obj.firstName);
+            console.log("Last Name: " + obj.lastName);
+        }
+
+        print(obj1);
+        print(obj2);*/
+
+
+        function createUser(firstName, lastName) {
+            return {
+                firstName,
+                lastName,
+
+                print() {
+                    console.log("First Name: " + this.firstName);
+                    console.log("Last Name: " + this.lastName);
+                }
+            };
+        }
+
+        let obj1 = createUser("Nikolai", "Gogol");
+        let obj2 = createUser("Milorad", "Pavich");
+
+        obj1.print();
+        obj2.print();
+
+
+    </script>
+</body>
+
+</html>
