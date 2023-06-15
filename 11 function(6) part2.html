@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+        Fix the bug in the code related to scopes.
+    </pre>
+    <script>
+
+        // названия товаров
+        let names = [];
+        names[0] = "Папір офісний А4, 80 г/м2, 500 л";
+        names[1] = "Біндер для паперу 51 мм";
+        names[2] = "Ручка шарикова синя";
+
+        // цены на товар
+        let prices = [];
+        prices[0] = 280.25; // "Папір офісний А4, 80 г/м2, 500 л";
+        prices[1] = 56;     // "Біндер для паперу 51 мм";
+        prices[2] = 12.50;  // "Ручка шарикова синя";
+
+        let count = []; //перенесено сюди, щоб працювало правильно
+
+        initCountArray();
+        calculateSum();
+
+        function initCountArray() {
+            // let count = []; - було тут, розташовано неправильно
+            for (let i = 0; i < names.length; i++) {
+                const productName = names[i];
+                let counttoBuy = +prompt("Вкажіть кількість для " + productName);
+
+                if (isNaN(counttoBuy))
+                    counttoBuy = 0;
+
+                count.push(counttoBuy);
+            }
+        }
+
+        function calculateSum() {
+            let totalSum = 0;
+            for (let i = 0; i < names.length; i++) {
+                const productName = names[i];
+                const productPrice = prices[i];
+                const boughtCount = count[i];
+
+                let price = productPrice * boughtCount;
+                totalSum += price;
+                console.log(`Ви придбали ${productName} загальною вартістю ${price}`);
+            }
+            console.log("Загальна вартість обраних товарів " + totalSum);
+        }
+    </script>
+
+</body>
+
+</html>

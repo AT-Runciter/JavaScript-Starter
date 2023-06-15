@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task X</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+         Ask the user for a number. Print all numbers in reverse order from the value entered by the user to 1. Use recursion to solve.
+    </pre>
+    <script>
+
+        let value = prompt("Напишіть число");
+        enterNumber(value);
+
+        function enterNumber(value) {
+
+            console.log(value);
+
+            if (value == 1)
+                return 1;
+            else {
+                value--;
+                enterNumber(value);
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
