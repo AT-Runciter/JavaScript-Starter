@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+         Create a function avg(a, b, c) that returns the arithmetic mean of the numbers a, b, c
+         If the parameter is missing - do not use the value to calculate the arithmetic mean.
+    </pre>
+    <script>
+
+        let t1 = prompt("напиши число");
+        let t2 = prompt("напиши число");
+        let t3 = prompt("напиши число");
+
+        function avg(a, b, c) {
+
+            let massiveAvg = [];
+            let sum = 0;
+            let result = 0;
+
+            // if( a || b || c) так можливо перевірити, але неправильно в контексті цього прикладу
+            /*
+            if (a != NaN) {
+                massiveAvg.push(Number(a));
+            }
+            if (b != NaN) {
+                massiveAvg.push(Number(b));
+            }
+            if (c != NaN) {
+                massiveAvg.push(Number(c));
+            }*/
+
+            massiveAvg.push((a != NaN) ? Number(a) : {});
+            massiveAvg.push((b != NaN) ? Number(b) : {});
+            massiveAvg.push((c != NaN) ? Number(c) : {});
+
+            for (let i = 0; i < massiveAvg.length; i++) {
+                sum += massiveAvg[i];
+                console.log(sum + " | " + massiveAvg[i] + "| " + massiveAvg.length);
+            }
+
+            result = sum / massiveAvg.length
+            return result;
+        }
+
+        console.log("Среднее арифметическое = " + avg(t1, t2, t3));
+    </script>
+</body>
+
+</html>

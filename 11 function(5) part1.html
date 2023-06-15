@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+         Create a function that takes an array of values and returns an array with duplicate values
+         or null if there are no duplicate values in the array.
+    </pre>
+    <script>
+
+        let arrayRepeat = [50, 3, 36, 5, 13, 50];
+        let arrayNotRepeat = [45, 35, 25, 15, 5, 0];
+
+        let repeatResult = findDubl(arrayRepeat);
+        console.log(findDubl(arrayRepeat));
+
+        let repeatNullResult = findDubl(arrayNotRepeat); //  let arrayResult = [];
+        console.log(findDubl(arrayNotRepeat));
+
+        console.log(repeatNullResult);
+
+        function findDubl(array1 = []) {
+
+            let arrayResult = [];
+
+            for (let i = 0; i < array1.length - 1; i++) {
+                const value = array1[i];
+                console.log(`Число ${value}, яке перебирається`);
+
+                for (let q = i + 1; q < array1.length; q++) {
+                    const element = array1[q];
+                    console.log(`= Числo ${element}, яке порівнюється`);
+
+                    if (value == element) {
+                        console.log(`Число ${value} повторюється`);
+
+                        arrayResult.push(value);
+
+                        break;
+                    }
+                }
+            }
+
+            console.log(arrayResult);
+
+            if (arrayResult.length == 0) {
+                return null;
+            }
+
+            return arrayResult;
+        }
+
+    </script>
+</body>
+
+</html>
