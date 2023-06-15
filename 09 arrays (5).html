@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+        Write a script that will find the minimum, maximum values of an array,
+        and will also print the sum of all array elements.
+    </pre>
+    <script>
+        let values = [10, 20, 4, 6, 11, 9, 125, 1, -8, 0, 3];
+
+        let max = Number.MIN_VALUE;
+        let min = Number.MAX_VALUE;
+
+        // console.log(`${min} и ${max} js number type`);
+
+        let currentValue = Number.MIN_VALUE; //Обнулили число для подальших дій
+
+        console.log("================");
+        //Знаходимо максимальне число
+        for (let a = 0; a < values.length; a++) {
+            currentValue = values[a]; //Поточне число в масиві
+            console.log("CurrValue : " + currentValue);
+
+            if (currentValue > max) { //Порівнюємо з поточним максимальним числом
+                console.log(currentValue + " > " + max);
+                max = currentValue; //Актуалізуємо поточне знайдене максимальне число
+                console.log("Max = " + max);
+            }
+            else {
+                console.log(max + " < " + currentValue + " | max = " + max); //Знайдене число не більше поточного максимального
+            }
+        }
+        console.log("Max = " + max);
+        console.log("================");
+
+        //Знаходимо мінімальне число :
+        for (const value of values) {
+            currentValue = value; //Поточне число
+
+            if (currentValue < min) { //Порівнюємо з поточним мінімальним числом
+                min = currentValue; //Актуалізуємо поточне знайдене мінімальне число
+                console.log(currentValue + " < " + min + " | min = " + min);
+            }
+            else {
+                console.log(min + " > " + currentValue + " | min = " + min); //Знайдене число більше поточного мінімального
+            }
+        }
+        console.log("Min = " + min);
+        console.log("Min = " + min + " | max = " + max);
+
+
+        //minitask 2 вивід суми всіх елементів масиву
+        let sum = 0;
+        for (let i = 0; i < values.length; i++) {
+            sum += values[i];
+            // sum = sum + values[i];
+        }
+        console.log("Sum of all elements = " + sum);
+    </script>
+</body>
+
+</html>

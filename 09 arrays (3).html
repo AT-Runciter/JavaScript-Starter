@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+         Given an array. Find the arithmetic mean of the values in this array.
+         Display only those elements that are greater than this arithmetic mean
+    </pre>
+    <script>
+        let values = [10, 20, 48, 6, 11, 9, 125, 1, 8, 0, 3, 255, 77, 11, 170, 4, 28];
+
+        //знаходимо суму всіх елементів
+        let sum = 0;
+        for (const value of values) {
+            sum += value;
+        }
+
+        //рахуємо середнє арифметичне
+        let seredneArifm = sum / values.length;
+        console.log("seredneArifm = " + seredneArifm);
+
+        for (const value of values) {
+            if (value > seredneArifm) {
+                console.log(value);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

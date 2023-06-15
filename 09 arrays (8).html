@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+         Given an array. Create two new arrays based on the values of this array.
+         Put all the even values in one array, and all the odd ones in the second.
+         Display the values that are in the first array and in the second array.
+    </pre>
+    <script>
+        let values = [10, 20, 5, 7, 11, 8, 125, 4, 8, 3, 23];
+
+        let array1 = [];
+        let array2 = [];
+
+        let a = 0;
+        let n = 0;
+
+        for (let index = 0; index < values.length; index++) {
+            if (values[index] % 2 == 0) {
+                array1[a] = values[index];
+                a++;
+            }
+            else {
+                array2[n] = values[index];
+                n++;
+            }
+        }
+
+        for (const k of array1) {
+            console.log(k);
+        }
+        console.log("========");
+        for (const n of array2) {
+            console.log(n);
+        }
+
+        console.log(array1);
+        console.log(array2);
+
+
+    </script>
+</body>
+
+</html>

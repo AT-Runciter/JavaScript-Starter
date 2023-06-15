@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+        Find the first positive element of the array and print it to the screen.
+    </pre>
+    <script>
+        let values = [-1, -5, -6, -3, -10, -5, 3, 4, -1, -8, 1, -10, 3];
+        for (let i = 0; i < values.length; i++) {
+            if (values[i] > 0) {
+                alert(`Число ${values[i]} по індексу ${i} - перший позитивний елемент в масиві`);
+                break;
+            }
+        }
+
+        //ще один варіант перебору з використанням forEach та нетиповим виходом throw з нього з виводенням помилки
+
+        /*let i = 0;
+        values.forEach(element => {
+            if (element > 0) {
+                alert(`Число ${element} по індексу ${i++} - перший позитивний елемент в масиві`);
+                throw { reason: `Число ${element} по індексу ${i} - перший позитивний елемент в масиві` }
+                return;
+            }
+            i++;
+        });*/
+
+    </script>
+</body>
+
+</html>

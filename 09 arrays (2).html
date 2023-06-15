@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+
+<body>
+    <pre>
+        Exercise:
+         Given an array. Swap the element with the maximum value with the element with the minimum value.
+    </pre>
+    <script>
+        let values = [10, 125, 4, 6, 11, 9, 20, 1, 8, 0, 3];
+
+        let max = Number.MIN_VALUE;
+        let min = Number.MAX_VALUE;
+
+        let maxElementIndex, minElementIndex;
+
+        for (let index = 0; index < values.length; index++) {
+            const element = values[index];
+            if (element > max) {
+                max = element;
+                maxElementIndex = index; // фіксуємо індекс максимального значення
+            }
+            if (element < min) {
+                min = element;
+                minElementIndex = index; // фіксуємо індекс мінімального значення
+            }
+        }
+
+        // міняємо значення місцями, використовуючи індекси, які зафіксували раніше
+        values[maxElementIndex] = min;
+        values[minElementIndex] = max;
+
+        for (const value of values) {
+            console.log(value);
+        }
+    </script>
+</body>
+
+</html>
